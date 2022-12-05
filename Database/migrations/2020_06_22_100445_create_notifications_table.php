@@ -25,8 +25,6 @@ class CreateNotificationsTable extends Migration
             $table->dateTime('read_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('project_id')->references('id')->on('projects');
         });
     }
 

@@ -28,17 +28,8 @@ class AddColumnToNotificationsTable extends Migration
      */
     public function down()
     {
-        if (DB::getDriverName() !== 'sqlite') {
-            Schema::table('deploy_notifications', function (Blueprint $table) {
-
-                $table->dropForeign(['project_id']);
-            });
-        }
         Schema::table('deploy_notifications', function (Blueprint $table) {
             $table->dropColumn('project_id');
-        });
-
-        Schema::table('deploy_notifications', function (Blueprint $table) {
             $table->dropColumn('user_id');
         });
     }
