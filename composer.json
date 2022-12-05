@@ -9,14 +9,14 @@
     }
   ],
   "scripts": {
-    "test": "php ./vendor/phpunit/phpunit/phpunit --colors=always -v --testdox",
+    "test": "php ./vendor/bin/phpunit --colors=always -v --testdox",
     "test-coverage": "php -dxdebug.mode=coverage ./vendor/phpunit/phpunit/phpunit --coverage-html coverage"
   },
   "autoload": {
     "psr-4": {
       "Deploy\\": "src/",
-      "Database\\Factories\\": "database/factories/",
-      "Database\\Seeders\\": "database/seeders/"
+      "Database\\Factories\\": "Database/factories/",
+      "Database\\Seeders\\": "Database/seeders/"
     }
   },
   "autoload-dev": {
@@ -26,7 +26,7 @@
   },
   "require": {
     "php": "^7.3|^8.0",
-    "symfony/process": "^6.0",
+    "symfony/process": "^5.0|^6.0",
     "phpseclib/phpseclib": "^2.0",
     "laravel/framework": "^8.0|^9.0",
     "guzzlehttp/guzzle": "^7.0.1"
@@ -34,7 +34,7 @@
   "require-dev": {
     "phpunit/phpunit": "^9.3",
     "mockery/mockery": "^1.4",
-    "orchestra/testbench": "^6.0",
+    "orchestra/testbench": "^6.0|^7.0",
     "doctrine/dbal": "^2.0"
   },
   "minimum-stability": "dev",
